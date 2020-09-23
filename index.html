@@ -2,12 +2,61 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>JavaScript for Web Designers - Simple tabs demo</title>
+        <title>Zeekr's webdev test</title>
 		
 		<!-- end container -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+		<img id="location_marker" src="location_marker.png" style="display: none";>
+				
+		
+
+	<script>
+		window.onload = function() {
+			var c = document.getElementById("map_canvas");
+			var ctx = c.getContext("2d");
+			var img = document.getElementById("osrs_map");
+			ctx.drawImage(img, 0, 0);
+		}
+	</script>
+
+	<script>
+		function refreshButton() {
+			var c = document.getElementById("map_canvas");
+			var ctx = c.getContext("2d");
+			ctx.clearRect(0, 0, 1200, 700);
+			var img = document.getElementById("osrs_map");
+			ctx.drawImage(img, 0, 0);
+			var img = document.getElementById("location_marker");
+			ctx.drawImage(img, 50, 150, 20, 31);
+		}
+	</script>
+
+	<script>
+		function refreshButton1() {
+			var c = document.getElementById("map_canvas");
+			var ctx = c.getContext("2d");
+			ctx.clearRect(0, 0, 1200, 700);
+			var img = document.getElementById("osrs_map");
+			ctx.drawImage(img, 0, 0);
+			var img = document.getElementById("location_marker");
+			ctx.drawImage(img, 140, 180, 20, 31);
+		}
+	</script>
+
+	<script>
+		function refreshButton2() {
+			var c = document.getElementById("map_canvas");
+			var ctx = c.getContext("2d");
+			ctx.clearRect(0, 0, 1200, 700);
+			var img = document.getElementById("osrs_map");
+			ctx.drawImage(img, 0, 0);
+			var img = document.getElementById("location_marker");
+			ctx.drawImage(img, 630, 310, 20, 31);
+		}
+	</script>
+		
         <div class="container">
             <ul class="tabs">
 				<li><a href="tab-0" class="active">Home</a></li>
@@ -37,9 +86,13 @@
                     <p>"She is dead," he answered.  "This much was learned from a green warrior recently captured by our forces in the south.  She escaped from the hordes of Thark with a strange creature of another world, only to fall into the hands of the Warhoons.  Their thoats were found wandering upon the sea bottom and evidences of a bloody conflict were discovered nearby."</p>
                 </li>
 				<li id="tab-4">
-					<img src="osrs_map.jpg">
+					<button onclick="refreshButton()">Update location</button>
+					<button onclick="refreshButton1()">Update location2</button>
+					<button onclick="refreshButton2()">Update location3</button>
+					<canvas id="map_canvas" width="1200" Height="700"></canvas>					
                 </li>
             </ul>
+			<img id="osrs_map" src="osrs_map.jpg" style="display: none";>
         </div> 
 
         <script src="script.js"></script>
