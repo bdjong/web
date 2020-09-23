@@ -56,6 +56,13 @@
 			ctx.drawImage(img, 630, 310, 20, 31);
 		}
 	</script>
+	
+	<script>
+	function b1() {
+	var iframe=document.getElementById("questFrame");
+	iframe.src = "https://docs.google.com/spreadsheets/d/19EyYvb6KJ61bpYwxQbsDUSJFPSYnOyGLYsJyhqBTOEo/edit?usp=sharing";
+	}
+	</script>
 		
         <div class="container">
             <ul class="tabs">
@@ -63,7 +70,8 @@
                 <li><a href="tab-1">Zeekr</a></li>
                 <li><a href="tab-2">Xarith</a></li>
                 <li><a href="tab-3">Ummfufu</a></li>
-				<li><a href="tab-4">Live Tracking</a></li>
+				<li><a href="tab-4">Quest list</a></li>
+				<li><a href="tab-5">Live Tracking</a></li>
             </ul>
             <ul class="tab-contents">
 				<li id="tab-0" class="visible">
@@ -71,26 +79,23 @@
 				</li>
                 <li id="tab-1">
                     <p>Zeekr's page</p>
-					
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/ResWVWI333o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					
 				</li>
                 <li id="tab-2">
-                    <p>"For one day longer the despatches continued to come from New York.  Then they, too, ceased. The man who had sent them, perched in his lofty  building, had either died of the plague or been consumed in the great  conflagrations he had described as raging around him. And what had  occurred in New York had been duplicated in all the other cities. It was  the same in San Francisco, and Oakland, and Berkeley. By Thursday the  people were dying so rapidly that their corpses could not be handled,  and dead bodies lay everywhere. Thursday night the panic outrush for  the country began. Imagine, my grandsons, people, thicker than the  salmon-run you have seen on the Sacramento river, pouring out of the  cities by millions, madly over the country, in vain attempt to escape  the ubiquitous death. You see, they carried the germs with them. Even  the airships of the rich, fleeing for mountain and desert fastnesses,  carried the germs.</p>
-
-                    <p>"Hundreds of these airships escaped to Hawaii, and not only did they  bring the plague with them, but they found the plague already there  before them. This we learned, by the despatches, until all order in San  Francisco vanished, and there were no operators left at their posts to  receive or send. It was amazing, astounding, this loss of communication  with the world. It was exactly as if the world had ceased, been blotted  out. For sixty years that world has no longer existed for me. I know  there must be such places as New York, Europe, Asia, and Africa; but not  one word has been heard of them&mdash;not in sixty years. With the coming of  the Scarlet Death the world fell apart, absolutely, irretrievably. Ten  thousand years of culture and civilization passed in the twinkling of an  eye, 'lapsed like foam.'</p>
+                    <p>Xarith's page</p>
                 </li>
                 <li id="tab-3">
-                    <p>"And what, think you, may have been the fate of the princess, Dejah Thoris?" I asked as casually as possible.</p>
-
-                    <p>"She is dead," he answered.  "This much was learned from a green warrior recently captured by our forces in the south.  She escaped from the hordes of Thark with a strange creature of another world, only to fall into the hands of the Warhoons.  Their thoats were found wandering upon the sea bottom and evidences of a bloody conflict were discovered nearby."</p>
+                    <p>Ummfufu's page</p>
                 </li>
 				<li id="tab-4">
+					<button id="b1" onClick="b1()">Load quest document</button>
+					<iframe id="questFrame" width="1200" height="700" src="about:blank"></iframe>
+				</li>
+				<li id="tab-5">
 					<button onclick="refreshButton()">Update location</button>
 					<button onclick="refreshButton1()">Update location2</button>
 					<button onclick="refreshButton2()">Update location3</button>
-					<canvas id="map_canvas" width="1200" Height="700"></canvas>					
-                </li>
+					<canvas id="map_canvas" width="1200" Height="700"></canvas>
+				</li>
             </ul>
 			<img id="osrs_map" src="osrs_map.jpg" style="display: none";>
         </div> 
